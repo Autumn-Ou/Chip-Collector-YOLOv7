@@ -1,6 +1,6 @@
 # Custom Section, Original README below
 
-Training command: "python3 train_aux.py --workers 8 --device 0 --batch-size 16 --data datasets/'Robot-Base Chip Detection'/'FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch'/Robot-Base_chip.yaml --img 640 640 --cfg cfg/training/yolov7-e6e.yaml --weights yolov7-e6e_training.pt --name yolov7_robot-base_chip_detector --hyp data/hyp.scratch.p6.yaml --project FRC-CDP --epochs 500"
+Training command: "python3 train.py --workers 8 --device 0 --batch-size 16 --data datasets/'Robot-Base Chip Detection'/'FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch'/Robot-Base_chip.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights yolov7.pt --name yolov7_robot-base_chip_detector --hyp data/hyp.scratch.p5.yaml --project FRC-CDP --epochs 500"
 
 NOTE: line 685 of utils/loss.py has to be swapped over to "from_which_layer.append((torch.ones(size=(len(b),)) * i).to('cuda'))" and line 756 to "fg_mask_inboxes = fg_mask_inboxes.to(torch.device('cuda'))" to prevent crashing. also note you need a ton of vram for the training.
 
