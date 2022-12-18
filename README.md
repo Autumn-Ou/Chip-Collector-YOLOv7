@@ -7,7 +7,7 @@ NOTE: line 685 of utils/loss.py has to be swapped over to "from_which_layer.appe
 Instructions for replication
 1. download repository,
 2. pip install -r requirements.txt
-3. run the training command abov to train
+3. run the training command above to train
 
 # Official YOLOv7
 
