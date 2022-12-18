@@ -1,3 +1,16 @@
+# Custom Section, Original README below
+
+Training command: "python3 train.py --workers 8 --device 0 --batch-size 16 --data datasets/'Robot-Base Chip Detection'/'FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch'/Robot-Base_chip.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights yolov7-e6e.pt --name yolov7_robot-base_chip_detector --hyp data/hyp.scratch.p5.yaml --project FRC-CDP --epochs 500"
+
+Largest model is used as accuracy matters more then anything else when collecting chips.
+
+NOTE: line 685 of utils/loss.py has to be swapped over to "from_which_layer.append((torch.ones(size=(len(b),)) * i).to('cuda'))" to prevent crashing.
+
+Instructions for replication
+1. download repository,
+2. pip install -r requirements.txt
+3. run the training command abov to train
+
 # Official YOLOv7
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)

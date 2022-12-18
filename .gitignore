@@ -47,6 +47,10 @@ test2017.zip
 train2017.zip
 val2017.zip
 
+FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch.zip
+datasets/Robot-Base Chip Detection/FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch/train
+datasets/Robot-Base Chip Detection/FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch/valid
+
 # MATLAB GitIgnore -----------------------------------------------------------------------------------------------------
 *.m~
 *.mat

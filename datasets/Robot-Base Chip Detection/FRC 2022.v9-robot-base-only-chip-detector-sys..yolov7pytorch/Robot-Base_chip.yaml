@@ -1,0 +1,12 @@
+train: ./datasets/Robot-Base Chip Detection/FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch/train/images
+val: ./datasets/Robot-Base Chip Detection/FRC 2022.v9-robot-base-only-chip-detector-sys..yolov7pytorch/valid/images
+
+nc: 1
+names: ['Bot-Base']
+
+roboflow:
+  workspace: 3044-vision-system
+  project: frc-2022-2bwbr
+  version: 9
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/3044-vision-system/frc-2022-2bwbr/dataset/9
