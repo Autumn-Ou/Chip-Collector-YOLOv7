@@ -102,6 +102,21 @@ def detect(save_img=False):
                 p, s, im0, frame = path[i], '%g: ' % i, im0s[i].copy(), dataset.count
             else:
                 p, s, im0, frame = path, '', im0s, getattr(dataset, 'frame', 0)
+                # if frame name is 1 convert to 0000001
+                if len(str(frame)) == 1:
+                    frame = f'000000{frame}'
+                elif len(str(frame)) == 2:
+                    frame = f'00000{frame}'
+                elif len(str(frame)) == 3:
+                    frame = f'0000{frame}'
+                elif len(str(frame)) == 4:
+                    frame = f'000{frame}'
+                elif len(str(frame)) == 5:
+                    frame = f'00{frame}'
+                elif len(str(frame)) == 6:
+                    frame = f'0{frame}'
+                else:
+                    frame = f'{frame}'
 
             p = Path(p)  # to Path
             save_path = str(save_dir / p.name)  # img.jpg
